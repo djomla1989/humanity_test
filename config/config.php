@@ -2,7 +2,7 @@
 
 //----- your database setup -----//
 define("DB_HOST", "localhost");
-define("DB_NAME", "humanity");
+define("DB_NAME", "user_vacation");
 define("DB_CHARSET", "latin1");
 define("DB_USERNAME", "root");
 define("DB_PASSWORD", "");
