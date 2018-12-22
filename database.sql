@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS `user_vacation_request` (
   `date_from` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
   `date_to`   DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
   `number_of_days` int(11) NOT NULL DEFAULT 0,
+  `status` ENUM('pending' , 'approved', 'declined') DEFAULT 'pending',
   `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
   `modified` DATETIME ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY  (`id`),

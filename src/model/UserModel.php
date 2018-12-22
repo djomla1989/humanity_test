@@ -8,7 +8,7 @@
 
 require_once(dirname(__DIR__) . '/../db/DBManager.php');
 
-class User extends DBManager
+class UserModel extends DBManager
 {
     protected $table = 'user';
 
@@ -20,6 +20,18 @@ class User extends DBManager
         return $this->query("SELECT * FROM $this->table WHERE id = ?")
             ->bind($id)
             ->asArray()
-            ->all();
+            ->one();
+    }
+
+    /**
+     * @param int $userId
+     * @param int $number
+     * @return mixed
+     */
+    public function updateNumberOfDays($userId, $number) {
+        return $this->query("UPDATE ".$this->table." SET vacation_days = ? WHERE id = ?")
+            ->bind($userId, $number)
+            ->run();
+
     }
 }

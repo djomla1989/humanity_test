@@ -27,23 +27,15 @@
                         <td>+923335586757</td>
                         <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
                     </tr>
-
-                    <tr>
-                        <td>Mohsin</td>
-                        <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                        <td>isometric.mohsin@gmail.com</td>
-                        <td>+923335586757</td>
-                        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-
-                    </tr>
-
                     </tbody>
 
                 </table>
 
                 <div class="clearfix"></div>
 
-                <button class="btn btn-primary" value="1" id="read" data-title="GET DATA"><span class="glyphicon glyphicon-read"></span></button>
+                <button class="btn btn-primary" value="1" id="read" data-title="GET DATA"><span class="glyphicon glyphicon-read">GET</span></button>
+
+                <button class="btn btn-primary" value="1" id="save" data-title=""><span class="glyphicon glyphicon-read">SAVE / POST</span></button>
 
             </div>
 
