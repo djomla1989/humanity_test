@@ -76,8 +76,12 @@ class Vacation extends MainController
             $userModel = $this->getModel('user');
             $res = $userModel->updateNumberOfDays($userId, $numberOfDays);
             if (!empty($res)) {
-                $this->view->renderSuccess($res);
+                $this->view->renderSuccess($res, 'Vacation approved');
             }
+        }
+
+        if (!empty($res) && $data['status'] == self::STATUS_DECLINED) {
+            $this->view->renderSuccess($res , 'Vacation declined');
         }
         $this->view->renderError('Nothing happen bro!');
     }
