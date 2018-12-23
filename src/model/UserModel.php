@@ -29,8 +29,8 @@ class UserModel extends DBManager
      * @return mixed
      */
     public function updateNumberOfDays($userId, $number) {
-        return $this->query("UPDATE ".$this->table." SET vacation_days = ? WHERE id = ?")
-            ->bind($userId, $number)
+        return $this->query("UPDATE ".$this->table." SET vacation_days = (vacation_days - ?) WHERE id = ?")
+            ->bind($number, $userId)
             ->run();
 
     }

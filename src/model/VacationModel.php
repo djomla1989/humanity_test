@@ -45,7 +45,7 @@ class VacationModel extends DBManager
      */
     public function updateStatus($data = array()) {
         return $this->query("UPDATE ".$this->table." SET status = ? WHERE id = ?")
-            ->bind($data['id'], $data['status'])
+            ->bind($data['status'], $data['id'])
             ->run();
     }
 

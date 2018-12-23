@@ -48,7 +48,7 @@ $(document).ready(function() {
             dataType: 'json',
             data : JSON.stringify({
                 id : id,
-                status : 'approve'
+                status : 'approved'
             }),
             contentType: "application/json; charset=utf-8",
             success: function (result) {
@@ -68,7 +68,7 @@ $(document).ready(function() {
             dataType: 'json',
             data : JSON.stringify({
                 id : id,
-                status : 'decline'
+                status : 'declined'
             }),
             contentType: "application/json; charset=utf-8",
             success: function (result) {

@@ -37,6 +37,10 @@
 
                 <button class="btn btn-primary" value="1" id="save" data-title=""><span class="glyphicon glyphicon-read">SAVE / POST</span></button>
 
+                <button class="btn btn-primary" value="1" id="approve" data-title=""><span class="glyphicon glyphicon-read">SAVE / PUT APPROVE</span></button>
+
+                <button class="btn btn-primary" value="1" id="decline" data-title=""><span class="glyphicon glyphicon-read">SAVE / PUT DECLINE</span></button>
+
             </div>
 
         </div>

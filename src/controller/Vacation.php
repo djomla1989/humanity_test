@@ -10,6 +10,10 @@ require_once('MainController.php');
 require_once(dirname(__DIR__) . '/lib/DateHelper.php');
 class Vacation extends MainController
 {
+    const STATUS_APPROVED = 'approved';
+    const STATUS_DECLINED = 'declined';
+    const STATUS_PENDING  = 'pending';
+
     private $model = 'vacation';
 
     public function handlePost() {
@@ -63,7 +67,7 @@ class Vacation extends MainController
         $res    = $model->updateStatus($updateData);
 
         //Update user vacation days
-        if (!empty($res)) {
+        if (!empty($res) && $data['status'] == self::STATUS_APPROVED) {
             $vacationRow  = $model->getById($data['id']);
             $numberOfDays = $vacationRow['number_of_days'];
             $userId       = $vacationRow['user_id'];
@@ -71,7 +75,9 @@ class Vacation extends MainController
             /** @var UserModel $userModel */
             $userModel = $this->getModel('user');
             $res = $userModel->updateNumberOfDays($userId, $numberOfDays);
-            $this->view->renderSuccess($res);
+            if (!empty($res)) {
+                $this->view->renderSuccess($res);
+            }
         }
         $this->view->renderError('Nothing happen bro!');
     }
