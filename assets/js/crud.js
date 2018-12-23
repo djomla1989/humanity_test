@@ -10,6 +10,7 @@ $(document).ready(function() {
             contentType: "application/json; charset=utf-8",
             success: function (result) {
                 console.log(result);
+                $("#response").html(JSON.stringify(result));
             },
             error: function (xhr, resp, text) {
                 console.log(xhr, resp, text);
@@ -32,6 +33,7 @@ $(document).ready(function() {
             contentType: "application/json; charset=utf-8",
             success: function (result) {
                 console.log(result);
+                $("#response").html(JSON.stringify(result));
             },
             error: function (xhr, resp, text) {
                 console.log(xhr, resp, text);
@@ -53,6 +55,7 @@ $(document).ready(function() {
             contentType: "application/json; charset=utf-8",
             success: function (result) {
                 console.log(result);
+                $("#response").html(JSON.stringify(result));
             },
             error: function (xhr, resp, text) {
                 console.log(xhr, resp, text);
@@ -73,6 +76,7 @@ $(document).ready(function() {
             contentType: "application/json; charset=utf-8",
             success: function (result) {
                 console.log(result);
+                $("#response").html(JSON.stringify(result));
             },
             error: function (xhr, resp, text) {
                 console.log(xhr, resp, text);
